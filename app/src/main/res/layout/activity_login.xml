@@ -135,13 +135,13 @@
                 android:autofillHints="emailAddress" />
 
             <TextView
-                android:id="@+id/tvEtiquetaContrasena"
+                android:id="@+id/tvEtiquetaPassword"
                 style="@style/CasaEtiqueta"
-                android:labelFor="@id/etContrasena"
+                android:labelFor="@id/etPassword"
                 android:text="Contraseña" />
 
             <EditText
-                android:id="@+id/etContrasena"
+                android:id="@+id/etPassword"
                 style="@style/CasaCampo"
                 android:hint="Escribe tu contraseña"
                 android:inputType="textPassword"
@@ -150,7 +150,7 @@
 
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnIniciarSesion"
+                android:id="@+id/btnLogin"
                 style="@style/CasaBoton"
                 android:layout_marginTop="16dp"
                 android:text="Iniciar Sesión" />

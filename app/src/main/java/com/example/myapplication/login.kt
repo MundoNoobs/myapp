@@ -11,7 +11,7 @@ class login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val btnIniciarSesion = findViewById<Button>(R.id.btnIniciarSesion)
+        val btnIniciarSesion = findViewById<Button>(R.id.btnLogin)
         btnIniciarSesion.setOnClickListener {
             val intent = Intent(this, desc::class.java)
             startActivity(intent)
