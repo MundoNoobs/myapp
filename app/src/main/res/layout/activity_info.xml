@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F4EB"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgIconoCasa"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_casa"
+                        android:tint="#AC553E"
+                        android:importantForAccessibility="no" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="casa / conectada"
+                        android:textColor="#343C32"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvNumeroPantalla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="04 / 05"
+                        android:contentDescription="Pantalla 4 de 5"
+                        android:textColor="#78786D"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:importantForAccessibility="no">
+
+                    <View
+                        android:id="@+id/paso1"
+                        style="@style/CasaPaso"
+                        android:background="@drawable/paso_activo" />
+
+                    <View
+                        android:id="@+id/paso2"
+                        style="@style/CasaPaso"
+                        android:background="@drawable/paso_activo" />
+
+                    <View
+                        android:id="@+id/paso3"
+                        style="@style/CasaPaso"
+                        android:background="@drawable/paso_activo" />
+
+                    <View
+                        android:id="@+id/paso4"
+                        style="@style/CasaPaso"
+                        android:background="@drawable/paso_activo" />
+
+                    <View
+                        android:id="@+id/paso5"
+                        style="@style/CasaPaso" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/CasaEtapa"
+                android:text="ASÍ SE SIENTE TU HOGAR" />
+
+            <TextView
+                android:id="@+id/tvTituloInformacion"
+                style="@style/CasaTitulo"
+                android:text="Información" />
+
+            <TextView
+                style="@style/CasaDescripcion"
+                android:text="Una mirada al ambiente y a los sensores de nuestra casa." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/CasaTarjeta"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CasaMarca"
+                        android:text="Temperatura" />
+
+                    <TextView
+                        android:id="@+id/tvTemperatura"
+                        style="@style/CasaNumero"
+                        android:text="24 °C" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CasaTarjeta"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CasaMarca"
+                    android:text="Distancia" />
+
+                <TextView
+                    android:id="@+id/tvDistancia"
+                    style="@style/CasaNumero"
+                    android:text="120 cm" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CasaTarjeta"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CasaMarca"
+                    android:text="Luminosidad" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvClara"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:minHeight="48dp"
+                        android:background="@drawable/fondo_ilustracion"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Clara"
+                        android:textColor="#343C32"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvOscura"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:minHeight="48dp"
+                        android:background="@drawable/fondo_ilustracion"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="Oscura"
+                        android:textColor="#343C32"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRetroceder"
+            style="@style/CasaBotonSecundario"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Retroceder" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAvanzar"
+            style="@style/CasaBoton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="Avanzar" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F4EB"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgIconoCasa"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_casa"
+                        android:tint="#AC553E"
+                        android:importantForAccessibility="no" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="casa / conectada"
+                        android:textColor="#343C32"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvNumeroPantalla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="03 / 05"
+                        android:contentDescription="Pantalla 3 de 5"
+                        android:textColor="#78786D"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:importantForAccessibility="no">
+
+                    <View
+                        android:id="@+id/paso1"
+                        style="@style/CasaPaso"
+                        android:background="@drawable/paso_activo" />
+
+                    <View
+                        android:id="@+id/paso2"
+                        style="@style/CasaPaso"
+                        android:background="@drawable/paso_activo" />
+
+                    <View
+                        android:id="@+id/paso3"
+                        style="@style/CasaPaso"
+                        android:background="@drawable/paso_activo" />
+
+                    <View
+                        android:id="@+id/paso4"
+                        style="@style/CasaPaso" />
+
+                    <View
+                        android:id="@+id/paso5"
+                        style="@style/CasaPaso" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/CasaEtapa"
+                android:text="UNA IDEA COMPARTIDA" />
+
+            <TextView
+                android:id="@+id/tvTituloProyecto"
+                style="@style/CasaTitulo"
+                android:text="Casa Inteligente" />
+
+            <LinearLayout
+                style="@style/CasaTarjeta"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CasaMarca"
+                    android:text="Sobre nuestro proyecto" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionProyecto"
+                    style="@style/CasaDescripcion"
+                    android:text="El descuido en hogares y oficinas genera un gran
+                    desperdicio energético al dejar luces y climatización
+                    encendidas innecesariamente, sumado a la
+                    ineficiencia del control manual.
+                    \n\
+                    \n\Para solucionarlo, proponemos un sistema de
+                     automatización IoT con Arduino que gestiona la
+                     iluminación y temperatura de forma autónoma
+                     basándose en las condiciones del entorno." />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CasaTarjeta"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgProyecto1"
+                    android:layout_width="88dp"
+                    android:layout_height="96dp"
+                    android:background="@drawable/pir"
+                    android:clipToOutline="true"
+                    android:contentDescription="Primera imagen sensor"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CasaMarca"
+                        android:text="Sensor PIR" />
+
+                    <TextView
+                        android:id="@+id/tvDescripcion1"
+                        style="@style/CasaDescripcion"
+                        android:text="Se utilizará para detectar
+                        \nmovimiento para el encendido de
+                        \nluces." />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CasaTarjeta"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgProyecto2"
+                    android:layout_width="88dp"
+                    android:layout_height="96dp"
+                    android:background="@drawable/tmp36"
+                    android:clipToOutline="true"
+                    android:contentDescription="Segundo sensor"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CasaMarca"
+                        android:text="Sensor Temperatura TMP36" />
+
+                    <TextView
+                        android:id="@+id/tvDescripcion2"
+                        style="@style/CasaDescripcion"
+                        android:text="Medirá la temperatura del ambiente
+                        \npara determinar si encender la
+                        \nclimatización o no." />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CasaTarjeta"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgProyecto3"
+                    android:layout_width="88dp"
+                    android:layout_height="96dp"
+                    android:background="@drawable/fotoresistencia"
+                    android:clipToOutline="true"
+                    android:contentDescription="Tercer Sensor"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CasaMarca"
+                        android:text="Fotoresistencia" />
+
+                    <TextView
+                        android:id="@+id/tvDescripcion3"
+                        style="@style/CasaDescripcion"
+                        android:text="Medirá la luminosidad del ambiente
+                        \npara determinar el encendido de las
+                        \nluces." />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRetroceder"
+            style="@style/CasaBotonSecundario"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Retroceder" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAvanzar"
+            style="@style/CasaBoton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="Avanzar" />
+
+    </LinearLayout>
+
+</LinearLayout>
