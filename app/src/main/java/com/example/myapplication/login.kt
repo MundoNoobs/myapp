@@ -19,6 +19,8 @@ class login : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        auth.signOut()
+
         binding.btnRetroceder.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -37,11 +39,6 @@ class login : AppCompatActivity() {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        val currentUser = auth.currentUser
-        if (currentUser != null) {}
-    }
 
     private fun iniciarSesionSegura(email: String, contrasena: String) {
         auth.signInWithEmailAndPassword(email, contrasena)
