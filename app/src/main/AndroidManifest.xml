@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".LoginActivity"
+            android:name=".login"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity

@@ -25,7 +25,7 @@ class desc : AppCompatActivity() {
         }
         val btnRetroceder = findViewById<Button>(R.id.btnRetroceder)
         btnRetroceder.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, login::class.java)
             startActivity(intent)
         }
     }
