@@ -17,10 +17,8 @@ class login : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Inicialización de la instancia de seguridad (cifrado TLS por defecto)
         auth = FirebaseAuth.getInstance()
 
-        // Navegación explícita a la pantalla principal
         binding.btnRetroceder.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -41,22 +39,17 @@ class login : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        // Control de acceso: evaluación de token de sesión activo
         val currentUser = auth.currentUser
-        if (currentUser != null) {
-            // Descomentar para salto automático si ya está logueado
-            // startActivity(Intent(this, control::class.java))
-            // finish()
-        }
+        if (currentUser != null) {}
     }
 
     private fun iniciarSesionSegura(email: String, contrasena: String) {
-        // Tránsito de credenciales encriptadas gestionado por Google Play Services
         auth.signInWithEmailAndPassword(email, contrasena)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Autenticación exitosa", Toast.LENGTH_SHORT).show()
-                    // Aquí puedes añadir el Intent para ir a control.kt tras el éxito
+                    val intent = Intent(this, desc::class.java)
+                    startActivity(intent)
                 } else {
                     // Respuesta genérica para mitigar intentos de enumeración de cuentas
                     Toast.makeText(this, "Error de autenticación.", Toast.LENGTH_SHORT).show()
