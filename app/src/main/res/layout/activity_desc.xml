@@ -115,15 +115,9 @@
                 <TextView
                     android:id="@+id/tvDescripcionProyecto"
                     style="@style/CasaDescripcion"
-                    android:text="El descuido en hogares y oficinas genera un gran
-                    desperdicio energético al dejar luces y climatización
-                    encendidas innecesariamente, sumado a la
-                    ineficiencia del control manual.
+                    android:text="El descuido en hogares y oficinas genera un gran desperdicio energético al dejar luces y climatización encendidas innecesariamente, sumado a la ineficiencia del control manual.
                     \n\
-                    \n\Para solucionarlo, proponemos un sistema de
-                     automatización IoT con Arduino que gestiona la
-                     iluminación y temperatura de forma autónoma
-                     basándose en las condiciones del entorno." />
+                    \n\Para solucionarlo, proponemos un sistema de automatización IoT con Arduino que gestiona la iluminación y temperatura de forma autónoma basándose en las condiciones del entorno." />
 
             </LinearLayout>
 
