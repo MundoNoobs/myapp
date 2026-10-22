@@ -24,7 +24,7 @@ class login : AppCompatActivity() {
         binding.btnRetroceder.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // Destruye la actividad actual por seguridad y rendimiento
+            finish() //
         }
 
         binding.btnLogin.setOnClickListener {
@@ -48,7 +48,6 @@ class login : AppCompatActivity() {
                     val intent = Intent(this, desc::class.java)
                     startActivity(intent)
                 } else {
-                    // Respuesta genérica para mitigar intentos de enumeración de cuentas
                     Toast.makeText(this, "Error de autenticación.", Toast.LENGTH_SHORT).show()
                 }
             }
